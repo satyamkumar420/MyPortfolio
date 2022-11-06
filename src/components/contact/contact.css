@@ -1,0 +1,121 @@
+.container.contact_container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.contact_options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact_option {
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+
+}
+
+.contact_option:hover {
+    border: 2px solid var(--color-primary);
+    background: var(--color-bg);
+    transform: scale(1.05);
+    transition: var(--transition);
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+}
+
+.contact_icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.contact_option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-style: 0.8rem;
+}
+
+.contact_detail {
+    color: var(--color-light);
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    /* text-align: center; */
+}
+
+
+/* ============ Form ============= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+input,
+textarea:focus {
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid var(--color-primary);
+    transition: var(--transition);
+
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid var(--color-primary);
+    transition: var(--transition);
+
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+
+/* =============MEDIA QUERIES (MEDIUM DEVICES) ================= */
+@media screen and (max-width: 1024px) {
+    .container.contact_container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+
+/* =============MEDIA QUERIES (MEDIUM DEVICES) ================= */
+@media screen and (max-width:600px) {
+    .container.contact_container {
+        width: var(--container-width-sm);
+    }
+
+}

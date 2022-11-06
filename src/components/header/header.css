@@ -1,0 +1,139 @@
+header {
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
+}
+
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  text-shadow: 0 0 3px #00ddff, 0 0 5px #058284;
+}
+
+/* ============== CTA ============== */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* ================ HEADER SOCIALS =============== */
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  transition: var(--transition);
+  font-size: large;
+}
+
+.header_socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+  transition: var(--transition);
+}
+
+.linkedin:hover {
+  background: white;
+  border-radius: 0.11rem;
+  color: #1da1f2;
+  transition: var(--transition);
+  transform: scale(1.4);
+}
+
+.twitter:hover {
+  /* background: #1da1f2; */
+  color: #1da1f2;
+  transition: var(--transition);
+  transform: scale(1.4);
+}
+
+.github:hover {
+  transform: scale(1.4);
+  transition: var(--transition);
+  background-color: black;
+  color: white;
+}
+
+/* ================== ME ================== */
+.me {
+  background: linear-gradient(180deg, #04eeff, transparent);
+  width: 20rem;
+  height: 22rem;
+  position: absolute;
+  right: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 3rem 0.5rem 0.5rem 0.5rem;
+  justify-content: center;
+  bottom: 2rem;
+  transition: var(--transition);
+}
+
+/* ============== SCROLL DOWN  ================ */
+.scroll_down {
+  position: absolute;
+  bottom: 10rem;
+  right: -2.3rem;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.scroll_mouse {
+  position: absolute;
+  bottom: 5rem;
+  right: -0.01rem;
+  cursor: pointer;
+  transition: var(--transition);
+  transform: scale(1.2);
+  font-size: 1.2rem;
+}
+
+.scroll_mouse:hover {
+  bottom: 5.3rem;
+  transform: scale(1.4);
+}
+
+/* ============= MEDIA QUERIES (MEDIUM DEVICES) ============ */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+}
+
+/* ============= MEDIA QUERIES (SMALL DEVICES) ============ */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  .header_socials,
+  .scroll_down,
+  .scroll_mouse {
+    display: none;
+  }
+
+  .me {
+    margin-right: 2.9rem;
+    border-radius: 2rem;
+    justify-content: center;
+    transition: var(--transition);
+    width: 80%;
+    height: 50%;
+    margin-top: 5rem;
+  }
+}
